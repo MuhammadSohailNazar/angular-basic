@@ -1,0 +1,18 @@
+<h2>Property Binding</h2>
+interploation
+<input type="text" value="{{name}}">
+
+<br>
+<br>
+property Binding using bracket
+<input type="text" [value]="name" [disabled]="isDisabled">
+
+
+<br>
+<br>
+property Binding using bind keyword
+<input type="text" [value]="name" bind-disabled="isDisabled">
+
+
+<!-- interploation didn't work with boolean attribute value,
+property binding work for boolean attribute value. -->
