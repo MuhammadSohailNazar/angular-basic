@@ -1,0 +1,18 @@
+<p *ngIf="true">this is true statement</p>
+<p *ngIf="false">this is false statement</p>
+
+<p *ngIf="displayName; else elseBlock">Muhammad Sohail Nazar</p>
+<ng-template #elseBlock>
+    <p>name is hidden</p>
+</ng-template>
+
+
+<div *ngIf="displayName; then thenBlock; else elseBlock1"></div>
+
+<ng-template #thenBlock>
+    <h2>Muhammad sohail nazar</h2>
+</ng-template>
+
+<ng-template #elseBlock1>
+    <h2>Hidden name</h2>
+</ng-template>
