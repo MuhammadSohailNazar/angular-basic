@@ -1,0 +1,9 @@
+<!-- simple assigning style color attribute to value orange -->
+<p [style.color]="'orange'">style binding color property.</p>
+
+<!-- assigning color value baseon condition -->
+<p [style.color]="hasError ? 'red' : 'green'">style binding color property using condition operator.</p>
+
+<!-- assign property to style color attribute -->
+<p [style.background-color]="highlighted">This is highlighted text</p>
+<h2 [ngStyle]="titleStyles">This is H2 heading with title class style using ngStyle attribute.</h2>
