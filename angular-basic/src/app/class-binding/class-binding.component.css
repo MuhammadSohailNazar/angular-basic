@@ -1,0 +1,10 @@
+.success-message{
+    color: green;
+}
+.error-message{
+    color:red;
+}
+.special-message{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}

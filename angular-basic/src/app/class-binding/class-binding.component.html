@@ -1,0 +1,13 @@
+<!-- simple use class attribute to add class -->
+<p class="success-message">This is success message</p>
+
+<!-- add class using class attribute -->
+<p [class]="error-message">This is error message.</p>
+
+<!-- Note: use cannot use class and [class] attribute on same html element -->
+<!-- add single class baseon condition -->
+<p [class.special-message]="isSpecialMessage">This is special message</p>
+
+<!-- adding multiple classes baseon condition -->
+
+<p [ngClass]='messageClasses'>adding multiple class baseon condition.</p>
