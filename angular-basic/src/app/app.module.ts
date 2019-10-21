@@ -14,6 +14,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     TwoWayBindingComponent,
     NgIfComponent,
     NgSwitchComponent,
-    NgForComponent
+    NgForComponent,
+    ComponentInteractionComponent
   ],
   imports: [
     BrowserModule,

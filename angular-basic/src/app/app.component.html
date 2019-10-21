@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    {{message}}
   </h1>
   <!-- <div app-test></div> -->
   <!-- <app-interpolation></app-interpolation> -->
@@ -13,7 +13,8 @@
   <!-- <app-two-way-binding></app-two-way-binding> -->
   <!-- <app-ng-if></app-ng-if> -->
   <!-- <app-ng-switch></app-ng-switch> -->
-  <app-ng-for></app-ng-for>
+  <!-- <app-ng-for></app-ng-for> -->
+  <app-component-interaction [parentData]="name" (childEvent)="message =$event"></app-component-interaction>
 
 </div>
 
