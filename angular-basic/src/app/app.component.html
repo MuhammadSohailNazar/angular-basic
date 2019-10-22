@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    {{message}}
+    <!-- {{message}} -->
+    Routing and Navigation
   </h1>
   <!-- <div app-test></div> -->
   <!-- <app-interpolation></app-interpolation> -->
@@ -16,9 +17,13 @@
   <!-- <app-ng-for></app-ng-for> -->
   <!-- <app-component-interaction [parentData]="name" (childEvent)="message =$event"></app-component-interaction> -->
   <!-- <app-pipes></app-pipes> -->
-  <app-employee-list></app-employee-list>
-  <app-employee-detail></app-employee-detail>
+  <!-- <app-employee-list></app-employee-list> -->
+  <!-- <app-employee-detail></app-employee-detail> -->
 
+  <nav>
+    <a routerLink="/departements" routerLinkActive="active">Departements</a>
+    <a routerLink="/employees" routerLinkActive="active">Employees</a>
+  </nav>
 </div>
 
 

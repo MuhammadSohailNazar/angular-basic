@@ -1,0 +1,12 @@
+nav a.active{
+    background-color: #991100;
+}
+
+nav a {
+    padding: 13px;
+    margin: 3px;
+    text-decoration: none;
+    color: #00c72b;
+    font-size: 20px;
+    font-family: monospace;
+}
