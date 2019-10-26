@@ -21,6 +21,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import { EmployeeService } from './employee.service';
 import { HttpClientModule } from "@angular/common/http";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartementDetailComponent } from './departement-detail/departement-detail.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PipesComponent,
     EmployeeDetailComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DepartementDetailComponent
   ],
   imports: [
     BrowserModule,
