@@ -4,8 +4,17 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router'
   selector: 'app-departement-detail',
   template: `
     <h3>You select departement with id = {{id}}</h3>
-    <a (click)="goPrevious()"> Previous</a>
-    <a (click)="goNext()"> Next</a>
+
+    <p>
+    <button (click)="ShowOverview()"> Overview</button>
+    <button (click)="ShowContact()"> Contact</button>
+    </p>
+    <router-outlet></router-outlet>
+    <p>
+    <button (click)="goPrevious()"> Previous</button>
+    <button (click)="goNext()"> Next</button>
+    </p>
+    
 
     <div>
     <button (click)="goToDepartements()">Back</button>
@@ -25,18 +34,26 @@ export class DepartementDetailComponent implements OnInit {
   }
   goPrevious() {
     let previousId = (this.id - 1);
-    this.router.navigate(["/departement", previousId]);
+    this.router.navigate(["/departements", previousId]);
   }
   goNext() {
 
     let nextId = (this.id + 1);
-    this.router.navigate(["/departement", nextId]);
+    this.router.navigate(["/departements", nextId]);
   }
 
   goToDepartements() {
     let selectedId = this.id ? this.id : null;
     //this.router.navigate(["/departements", { id: selectedId }]);
     this.router.navigate(['../', { id: selectedId }], { relativeTo: this.route });
+  }
+
+  ShowOverview() {
+    this.router.navigate(['overview'], { relativeTo: this.route });
+  }
+
+  ShowContact() {
+    this.router.navigate(['contact'], { relativeTo: this.route });
   }
 
 }

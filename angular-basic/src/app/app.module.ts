@@ -18,7 +18,7 @@ import { ComponentInteractionComponent } from './component-interaction/component
 import { PipesComponent } from './pipes/pipes.component';
 
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
-import { EmployeeService } from './employee.service';
+
 import { HttpClientModule } from "@angular/common/http";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartementDetailComponent } from './departement-detail/departement-detail.component';
@@ -55,7 +55,7 @@ import { DepartementContactComponent } from './departement-contact/departement-c
     FormsModule,
     HttpClientModule
   ],
-  providers: [EmployeeService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
