@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute, ParamMap } from '@angular/router'
 @Component({
   selector: 'app-departement-list',
   template: `
     <h3>
       Departement List
     </h3>
-    <ul class="items" >
-    <li class="badge" (click)="onSelect(dep)" *ngFor="let dep of departements"> {{dep.id + ")."}} {{dep.name}}</li>
+    <ul class="" >
+    <li class="items" [class.selected]="isSelected(dep)" (click)="onSelect(dep)" *ngFor="let dep of departements"> {{dep.id + ")."}} {{dep.name}}</li>
     </ul>
   `,
   styles: [`.items  {
@@ -18,12 +18,15 @@ import { Router } from '@angular/router'
     color: white;
     width: 95px;
 }
-
+.selected{
+  background: #110006;
+}
 `]
 })
 export class DepartementListComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  public selectedId;
+  constructor(private router: Router, private route: ActivatedRoute) { }
   public departements = [
     { "id": 1, "name": "Angular" },
     { "id": 2, "name": "Node" },
@@ -32,10 +35,17 @@ export class DepartementListComponent implements OnInit {
     { "id": 5, "name": "Bootstrap" },
   ];
   ngOnInit() {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.selectedId = parseInt(params.get("id"));
+    });
   }
 
   onSelect(departement) {
     this.router.navigate(["/departement", departement.id]);
+  }
+
+  isSelected(departement) {
+    return this.selectedId === departement.id;
   }
 
 }
